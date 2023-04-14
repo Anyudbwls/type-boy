@@ -7,12 +7,12 @@
 // string , number ,number
 // 함수 타입 -> number
 
-type calc = 'add' | 'substract' | 'multiply' | 'divide' | 'remainder';
+type calc = 'add' | 'subtract' | 'multiply' | 'divide' | 'remainder';
 
 function calculateMy(calc: calc, a: number, b: number) {
   if (calc === 'add') {
     return a + b;
-  } else if (calc === 'substract') {
+  } else if (calc === 'subtract') {
     return a - b;
   } else if (calc === 'multiply') {
     return a * b;
@@ -25,20 +25,20 @@ function calculateMy(calc: calc, a: number, b: number) {
   }
 }
 console.log(calculateMy('add', 1, 3)); // 4
-console.log(calculateMy('substract', 3, 1)); // 2
+console.log(calculateMy('subtract', 3, 1)); // 2
 console.log(calculateMy('multiply', 4, 2)); // 8
 console.log(calculateMy('divide', 4, 2)); // 2
 console.log(calculateMy('remainder', 5, 2)); // 1
 
 /**-------------------------------------------------------------------------------------------- */
 
-type Command = 'add' | 'substract' | 'multiply' | 'divide' | 'remainder';
+type Command = 'add' | 'subtract' | 'multiply' | 'divide' | 'remainder';
 
-function calculate(command: Command, a: number, b: number) {
+const calculate = (command: Command, a: number, b: number) => {
   switch (command) {
     case 'add':
       return a + b;
-    case 'substract':
+    case 'subtract':
       return a - b;
     case 'multiply':
       return a * b;
@@ -49,10 +49,10 @@ function calculate(command: Command, a: number, b: number) {
     default:
       throw Error('unknown command ');
   }
-}
+};
 
 console.log(calculate('add', 1, 3)); // 4
-console.log(calculate('substract', 3, 1)); // 2
+console.log(calculate('subtract', 3, 1)); // 2
 console.log(calculate('multiply', 4, 2)); // 8
 console.log(calculate('divide', 4, 2)); // 2
 console.log(calculate('remainder', 5, 2)); // 1
